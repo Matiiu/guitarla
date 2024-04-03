@@ -17,6 +17,7 @@ export default function Header({ cart, dispatch }: HeaderProps) {
 
   useEffect(() => {
     if (cart.length > 0) {
+      console.log("ENTRO EN useEffect");
       localStorage.setItem("cart", JSON.stringify(cart));
     }
   }, [cart]);
